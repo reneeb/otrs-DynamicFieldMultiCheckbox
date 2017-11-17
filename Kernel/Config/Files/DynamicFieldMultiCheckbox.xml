@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_config version="1.0" init="Config">
+    <ConfigItem Name="DynamicFields::Driver###MultiCheckbox" Required="0" Valid="1">
+        <Description Translatable="1">DynamicField backend registration.</Description>
+        <Group>DynamicFieldMultiCheckbox</Group>
+        <SubGroup>DynamicFields::Driver::Registration</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="DisplayName" Translatable="1">MultiCheckbox</Item>
+                <Item Key="Module">Kernel::System::DynamicField::Driver::MultiCheckbox</Item>
+                <Item Key="ConfigDialog">AdminDynamicFieldMultiselect</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+</otrs_config>
