@@ -86,16 +86,6 @@ sub EditFieldRender {
         $FieldClass .= ' ' . $Param{Class};
     }
 
-    # set field as mandatory
-    if ( $Param{Mandatory} ) {
-        $FieldClass .= ' Validate_Required';
-    }
-
-    # set error css class
-    if ( $Param{ServerError} ) {
-        $FieldClass .= ' ServerError';
-    }
-
     # set PossibleValues, use PossibleValuesFilter if defined
     my $PossibleValues = $Param{PossibleValuesFilter} // $Self->PossibleValuesGet(%Param);
 
@@ -116,12 +106,6 @@ sub EditFieldRender {
         PossibleValues     => $PossibleValues,
         Value              => $Value,
     );
-
-    # check and set class if necessary
-    my $FieldClass = 'DynamicFieldCheckbox';
-    if ( defined $Param{Class} && $Param{Class} ne '' ) {
-        $FieldClass .= ' ' . $Param{Class};
-    }
 
     # set field as mandatory
     if ( $Param{Mandatory} ) {
